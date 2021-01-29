@@ -1,7 +1,7 @@
 ### installazione
 
 ```bash
-docker build -t mirkobriga/task . && docker run -p 8080:8080 -d mirkobriga/task
+docker build -t mirkobriga/task . && docker run -p 8080:8080 -d --name mbtask mirkobriga/task
 ```
 
 ### richiedere tutte le transazioni
@@ -14,4 +14,9 @@ curl localhost:8080/transactions
 
 ```bash
 curl localhost:8080/transactions/{customer_id}
+```
+
+### lanciare test
+```bash
+docker exec -it mbtask npm run test
 ```
