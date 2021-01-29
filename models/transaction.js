@@ -23,6 +23,7 @@ const getAll = (callback) => {
 
 /**
  * I could use csvtojson from https://www.npmjs.com/package/csvtojson that is more simple but this way is more similar to use a database
+ * @param {String} id 
  * @param {Function} callback 
  */
 const getById = (id, callback) => {
